@@ -1,51 +1,47 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## Requirements
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Thank your for your interest in our candidacy test! To get started, you'll need a few things:
 
-## About Laravel
+### Environment
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+- [PHP 5.6/7+](http://www.php.net) 
+- [Composer](http://getcomposer.org)
+- [SQLite](http://php.net/manual/en/sqlite3.setup.php)
+- [Node](https://nodejs.org/en/download)
+- [NPM](https://www.npmjs.com/get-npm)
+- [GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Start developing
+Run the following commands
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+```
+git clone https://github.com/SPA-Web/web-test.git
+composer install    # Installs PHP dependencies
+npm install         # Installs Node compiling dependencies
+php artisan migrate # Creates required table structure using the SQLite configuration
+php artisan db:seed # Adds 10 dummy users to the SQLite users table
+php artisan serve   # Makes development environment available in your browser at http://localhost:8000
+npm run watch       # Starts a watcher job to recompile resources when changes are detected
+```
 
-## Learning Laravel
+## Tasks
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+The following tasks will test your general ability to code in a Laravel + Vue environment. Do your best and good luck!
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+### Task 1 requirements
 
-## Laravel Sponsors
+- Create a Laravel route that returns a user JSON object retrieved by a `email` parameter.
+- Use the existing Eloquent User model.
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+### Task 2 requirements
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+- Update the view to call the newly created user route using the user `email` entered into the `input` field. 
+- If a user is not found, an error should be displayed to the user. 
+- If the user is found, render the user data in a space below the search box.
+- These actions should be repeatable and should not require a new page request.
 
-## Contributing
+## Submission
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+When you're done and confident in your implementation, commit your code locally. Next, you can compress your codebase into an archive (ZIP/TAR/RAR/etc). Please include all hidden files. Files prefixed with a `.` specifically like `.gitignore` for example. Windows hidden files are not needed. Also, please do not include the `node_modules` or `vendor` directories.
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Once compressed, you should pass the archived file on to your recruiter or send it in via any method we might have provided during the interview.
