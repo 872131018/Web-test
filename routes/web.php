@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Http\Request;
+
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,3 +16,11 @@
 */
 
 Route::get('/', 'TestController@index');
+
+Route::get('/email', function (Request $request) {
+    try {
+        return response()->json(User::where('email', '=', $request->q)->firstOrFail());
+    } catch(Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 404);
+    }
+});

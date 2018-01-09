@@ -4,7 +4,7 @@ Thank your for your interest in our candidacy test! To get started, you'll need 
 
 ### Environment
 
-- [PHP 5.6/7+](http://www.php.net) 
+- [PHP 5.6/7+](http://www.php.net)
 - [Composer](http://getcomposer.org)
 - [SQLite](http://php.net/manual/en/sqlite3.setup.php)
 - [Node](https://nodejs.org/en/download)
@@ -35,8 +35,8 @@ The following tasks will test your general ability to code in a Laravel + Vue en
 
 ### Task 2 requirements
 
-- Update the view to call the newly created user route using the user `email` entered into the `input` field. 
-- If a user is not found, an error should be displayed to the user. 
+- Update the view to call the newly created user route using the user `email` entered into the `input` field.
+- If a user is not found, an error should be displayed to the user.
 - If the user is found, render the user data in a space below the search box.
 - These actions should be repeatable and should not require a new page request.
 
@@ -45,3 +45,11 @@ The following tasks will test your general ability to code in a Laravel + Vue en
 When you're done and confident in your implementation, commit your code locally. Next, you can compress your codebase into an archive (ZIP/TAR/RAR/etc). Please include all hidden files. Files prefixed with a `.` specifically like `.gitignore` for example. Windows hidden files are not needed. Also, please do not include the `node_modules` or `vendor` directories.
 
 Once compressed, you should pass the archived file on to your recruiter or send it in via any method we might have provided during the interview.
+
+### Progress Milestones
+
+- Updated axios and laravel-mix to latest version with npm outdated.
+- Added pug language processor to use pug in components
+- Added a route with a closure that returns the queried user from a query string
+- Added a component to display the returned user data
+- Added a component to display errors if user can't be found
